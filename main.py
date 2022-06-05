@@ -14,6 +14,6 @@ if __name__ == '__main__':
     sql_con
     cursor = sql_con.cursor()
     cursor.execute("SELECT sum(duration) from polaczenia")
-    final = cursor.fetchone()
+    final = cursor.fetchone()[0]
 
 print(str(final))
